@@ -20,6 +20,24 @@ class CalendarViewController: UIViewController {
         return label
     }()
 
+    private let prevButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("<", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTapPrevButton), for: .touchUpInside)
+        return button
+    }()
+
+    private let nextButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle(">", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
+        return button
+    }()
+
     private let dietSummaryCard: SummaryCard = {
         let card = SummaryCard()
         card.titleLabel.text = "Diet Summary"
@@ -62,9 +80,14 @@ class CalendarViewController: UIViewController {
         exerciseSummaryCard.addGestureRecognizer(tapGestureExercise)
 
         NSLayoutConstraint.activate([
+            prevButton.centerYAnchor.constraint(equalTo: monthLabel.centerYAnchor),
+            prevButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+
+            nextButton.centerYAnchor.constraint(equalTo: monthLabel.centerYAnchor),
+            nextButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+
             monthLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             monthLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            monthLabel.heightAnchor.constraint(equalToConstant: 30),  // 명시적으로 높이를 설정
 
             calendarView.topAnchor.constraint(equalTo: monthLabel.bottomAnchor, constant: 20),
             calendarView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -86,6 +109,8 @@ class CalendarViewController: UIViewController {
 
     private func setupMonthLabel() {
         view.addSubview(monthLabel)
+        view.addSubview(prevButton)
+        view.addSubview(nextButton)
     }
 
     private func setupCalendarView() {
@@ -169,6 +194,17 @@ class CalendarViewController: UIViewController {
         navigationController?.pushViewController(exerciseDetailsViewController, animated: true)
     }
 
+    @objc private func didTapPrevButton() {
+        currentMonthStartDate = Calendar.current.date(byAdding: .month, value: -1, to: currentMonthStartDate)!
+        setupCurrentMonth()
+        calendarView.reloadData()
+    }
+
+    @objc private func didTapNextButton() {
+        currentMonthStartDate = Calendar.current.date(byAdding: .month, value: 1, to: currentMonthStartDate)!
+        setupCurrentMonth()
+        calendarView.reloadData()
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -233,6 +269,8 @@ class SummaryCard: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.textAlignment = .center
+        label.numberOfLines = 1
+        label.lineBreakMode = .byTruncatingTail
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -262,8 +300,7 @@ class SummaryCard: UIView {
             bodyLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
             bodyLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             bodyLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            bodyLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-            bodyLabel.heightAnchor.constraint(equalToConstant: 30)  // 고정된 높이로 설정
+            bodyLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
         ])
     }
 
@@ -271,7 +308,6 @@ class SummaryCard: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
 
 class CalendarCell: UICollectionViewCell {
 
