@@ -180,13 +180,18 @@ class DietAnalysisViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         guard !data.isEmpty else { return }
         
-        let maxDataValue = data.values.max() ?? 1 // Prevent division by zero
+        // Check if maxDataValue is NaN and set it to 1 if it is
+        let maxDataValue = data.values.max() ?? 1
+        guard !maxDataValue.isNaN else { return }
+        
         let sortedKeys = data.keys.sorted()
         let path = UIBezierPath()
         
         for (index, key) in sortedKeys.enumerated() {
             let xPosition = CGFloat(index) * (lineChartView.frame.width / CGFloat(sortedKeys.count))
             let yPosition = lineChartView.frame.height - (CGFloat(data[key]!) / CGFloat(maxDataValue) * lineChartView.frame.height)
+            
+            guard !yPosition.isNaN else { continue }
             
             if index == 0 {
                 path.move(to: CGPoint(x: xPosition, y: yPosition))
@@ -228,6 +233,7 @@ class DietAnalysisViewController: UIViewController, UIPickerViewDelegate, UIPick
         yAxisBottomLabel.frame = CGRect(x: -40, y: lineChartView.frame.height - 10, width: 30, height: 20)
         lineChartView.addSubview(yAxisBottomLabel)
     }
+
     
     // MARK: - UIPickerView Delegate & DataSource Methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

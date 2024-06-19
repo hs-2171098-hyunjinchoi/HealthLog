@@ -199,7 +199,10 @@ class ExerciseAnalysisViewController: UIViewController, UIPickerViewDelegate, UI
         
         guard !data.isEmpty else { return }
         
-        let maxDataValue = data.values.max() ?? 1 // Prevent division by zero
+        // Check if maxDataValue is NaN and set it to 1 if it is
+        let maxDataValue = data.values.max() ?? 1
+        guard !maxDataValue.isNaN else { return }
+        
         let sortedKeys = data.keys.sorted()
         let path = UIBezierPath()
         
@@ -209,6 +212,8 @@ class ExerciseAnalysisViewController: UIViewController, UIPickerViewDelegate, UI
         for (index, key) in sortedKeys.enumerated() {
             let xPosition = CGFloat(index) * (chartWidth / CGFloat(sortedKeys.count - 1)) + margin
             let yPosition = lineChartView.frame.height - (CGFloat(data[key]!) / CGFloat(maxDataValue) * lineChartView.frame.height)
+            
+            guard !yPosition.isNaN else { continue }
             
             if index == 0 {
                 path.move(to: CGPoint(x: xPosition, y: yPosition))
