@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		C6043EA92C1C5EDD00E26460 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6043EA82C1C5EDD00E26460 /* AppDelegate.swift */; };
 		C6043EAB2C1C5EDD00E26460 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6043EAA2C1C5EDD00E26460 /* SceneDelegate.swift */; };
-		C6043EAD2C1C5EDD00E26460 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6043EAC2C1C5EDD00E26460 /* ViewController.swift */; };
+		C6043EAD2C1C5EDD00E26460 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6043EAC2C1C5EDD00E26460 /* MainViewController.swift */; };
 		C6043EB02C1C5EDD00E26460 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C6043EAF2C1C5EDD00E26460 /* Base */; };
 		C6043EB22C1C5EDE00E26460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6043EB12C1C5EDE00E26460 /* Assets.xcassets */; };
 		C6043EB52C1C5EDE00E26460 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C6043EB42C1C5EDE00E26460 /* Base */; };
+		C6043EBD2C1C6E5400E26460 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6043EBC2C1C6E5400E26460 /* DashboardViewController.swift */; };
+		C6043EBF2C1C6E8A00E26460 /* DietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6043EBE2C1C6E8A00E26460 /* DietViewController.swift */; };
+		C6043EC12C1C6EC200E26460 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6043EC02C1C6EC200E26460 /* ExerciseViewController.swift */; };
+		C6043EC32C1C6EE700E26460 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6043EC22C1C6EE700E26460 /* CalendarViewController.swift */; };
+		C6043EC52C1C75AB00E26460 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6043EC42C1C75AB00E26460 /* AlarmViewController.swift */; };
+		C6043EC72C1C7B8000E26460 /* ExerciseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6043EC62C1C7B8000E26460 /* ExerciseDetailsViewController.swift */; };
+		C6043EC92C1C7B9800E26460 /* DietDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6043EC82C1C7B9800E26460 /* DietDetailsViewController.swift */; };
+		C6043ECC2C1C91FB00E26460 /* HealthDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6043ECA2C1C91FB00E26460 /* HealthDataModel.xcdatamodeld */; };
+		C61DF6C92C1D6232002BC029 /* ringtone-126505.wav in Resources */ = {isa = PBXBuildFile; fileRef = C61DF6C82C1D6232002BC029 /* ringtone-126505.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C6043EA52C1C5EDD00E26460 /* HealthLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6043EA82C1C5EDD00E26460 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6043EAA2C1C5EDD00E26460 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C6043EAC2C1C5EDD00E26460 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6043EAC2C1C5EDD00E26460 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C6043EAF2C1C5EDD00E26460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6043EB12C1C5EDE00E26460 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6043EB42C1C5EDE00E26460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6043EB62C1C5EDE00E26460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6043EBC2C1C6E5400E26460 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		C6043EBE2C1C6E8A00E26460 /* DietViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewController.swift; sourceTree = "<group>"; };
+		C6043EC02C1C6EC200E26460 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		C6043EC22C1C6EE700E26460 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		C6043EC42C1C75AB00E26460 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		C6043EC62C1C7B8000E26460 /* ExerciseDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailsViewController.swift; sourceTree = "<group>"; };
+		C6043EC82C1C7B9800E26460 /* DietDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietDetailsViewController.swift; sourceTree = "<group>"; };
+		C6043ECB2C1C91FB00E26460 /* HealthDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthDataModel.xcdatamodel; sourceTree = "<group>"; };
+		C61DF6C82C1D6232002BC029 /* ringtone-126505.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "ringtone-126505.wav"; path = "HealthLog/Assets.xcassets/ringtone-126505.dataset/ringtone-126505.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +58,8 @@
 		C6043E9C2C1C5EDD00E26460 = {
 			isa = PBXGroup;
 			children = (
+				C61DF6C82C1D6232002BC029 /* ringtone-126505.wav */,
+				C6043ECA2C1C91FB00E26460 /* HealthDataModel.xcdatamodeld */,
 				C6043EA72C1C5EDD00E26460 /* HealthLog */,
 				C6043EA62C1C5EDD00E26460 /* Products */,
 			);
@@ -56,9 +76,16 @@
 		C6043EA72C1C5EDD00E26460 /* HealthLog */ = {
 			isa = PBXGroup;
 			children = (
+				C6043EC02C1C6EC200E26460 /* ExerciseViewController.swift */,
 				C6043EA82C1C5EDD00E26460 /* AppDelegate.swift */,
 				C6043EAA2C1C5EDD00E26460 /* SceneDelegate.swift */,
-				C6043EAC2C1C5EDD00E26460 /* ViewController.swift */,
+				C6043EAC2C1C5EDD00E26460 /* MainViewController.swift */,
+				C6043EC42C1C75AB00E26460 /* AlarmViewController.swift */,
+				C6043EC22C1C6EE700E26460 /* CalendarViewController.swift */,
+				C6043EBE2C1C6E8A00E26460 /* DietViewController.swift */,
+				C6043EBC2C1C6E5400E26460 /* DashboardViewController.swift */,
+				C6043EC82C1C7B9800E26460 /* DietDetailsViewController.swift */,
+				C6043EC62C1C7B8000E26460 /* ExerciseDetailsViewController.swift */,
 				C6043EAE2C1C5EDD00E26460 /* Main.storyboard */,
 				C6043EB12C1C5EDE00E26460 /* Assets.xcassets */,
 				C6043EB32C1C5EDE00E26460 /* LaunchScreen.storyboard */,
@@ -125,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C61DF6C92C1D6232002BC029 /* ringtone-126505.wav in Resources */,
 				C6043EB22C1C5EDE00E26460 /* Assets.xcassets in Resources */,
 				C6043EB52C1C5EDE00E26460 /* Base in Resources */,
 				C6043EB02C1C5EDD00E26460 /* Base in Resources */,
@@ -138,9 +166,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6043EAD2C1C5EDD00E26460 /* ViewController.swift in Sources */,
+				C6043ECC2C1C91FB00E26460 /* HealthDataModel.xcdatamodeld in Sources */,
+				C6043EC52C1C75AB00E26460 /* AlarmViewController.swift in Sources */,
+				C6043EAD2C1C5EDD00E26460 /* MainViewController.swift in Sources */,
 				C6043EA92C1C5EDD00E26460 /* AppDelegate.swift in Sources */,
+				C6043EC72C1C7B8000E26460 /* ExerciseDetailsViewController.swift in Sources */,
 				C6043EAB2C1C5EDD00E26460 /* SceneDelegate.swift in Sources */,
+				C6043EBD2C1C6E5400E26460 /* DashboardViewController.swift in Sources */,
+				C6043EC12C1C6EC200E26460 /* ExerciseViewController.swift in Sources */,
+				C6043EC92C1C7B9800E26460 /* DietDetailsViewController.swift in Sources */,
+				C6043EC32C1C6EE700E26460 /* CalendarViewController.swift in Sources */,
+				C6043EBF2C1C6E8A00E26460 /* DietViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +336,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +365,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +401,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C6043ECA2C1C91FB00E26460 /* HealthDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C6043ECB2C1C91FB00E26460 /* HealthDataModel.xcdatamodel */,
+			);
+			currentVersion = C6043ECB2C1C91FB00E26460 /* HealthDataModel.xcdatamodel */;
+			name = HealthDataModel.xcdatamodeld;
+			path = /Users/chj/Desktop/IosProject/HealthLog/HealthDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C6043E9D2C1C5EDD00E26460 /* Project object */;
 }
