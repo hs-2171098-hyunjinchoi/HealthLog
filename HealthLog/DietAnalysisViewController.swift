@@ -188,7 +188,7 @@ class DietAnalysisViewController: UIViewController, UIPickerViewDelegate, UIPick
         let path = UIBezierPath()
         
         for (index, key) in sortedKeys.enumerated() {
-            let xPosition = CGFloat(index) * (lineChartView.frame.width / CGFloat(sortedKeys.count))
+            let xPosition = CGFloat(index) * (lineChartView.frame.width / CGFloat(sortedKeys.count - 1))
             let yPosition = lineChartView.frame.height - (CGFloat(data[key]!) / CGFloat(maxDataValue) * lineChartView.frame.height)
             
             guard !yPosition.isNaN else { continue }
@@ -200,12 +200,20 @@ class DietAnalysisViewController: UIViewController, UIPickerViewDelegate, UIPick
             }
             
             // Add labels for the first and last date only to reduce clutter
-            if index == 0 || index == sortedKeys.count - 1 {
+            if index == 0 {
                 let dayLabel = UILabel()
                 dayLabel.text = key
                 dayLabel.font = UIFont.systemFont(ofSize: 8)
                 dayLabel.textAlignment = .center
                 dayLabel.frame = CGRect(x: xPosition - 20, y: lineChartView.frame.height + 5, width: 60, height: 20)
+                lineChartView.addSubview(dayLabel)
+            } else if index == sortedKeys.count - 1 {
+                let dayLabel = UILabel()
+                dayLabel.text = key
+                dayLabel.font = UIFont.systemFont(ofSize: 8)
+                dayLabel.textAlignment = .center
+                // Adjust xPosition to ensure it does not go out of bounds
+                dayLabel.frame = CGRect(x: min(xPosition - 20, lineChartView.frame.width - 60), y: lineChartView.frame.height + 5, width: 60, height: 20)
                 lineChartView.addSubview(dayLabel)
             }
         }
