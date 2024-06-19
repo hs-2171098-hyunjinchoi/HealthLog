@@ -29,3 +29,5 @@
 * DietAnalysisViewController: 사용자가 입력한 식단 데이터를 그래프로 분석하여 시각적으로 표시하는 화면.
 * ExerciseAnalysisViewController: 사용자가 입력한 운동 데이터를 그래프로 분석하여 시각적으로 표시하는 화면.
 
+## 시연 영상
+https://youtu.be/JbteJZKZFmA
