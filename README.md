@@ -9,6 +9,15 @@
 4. 달력 기능: 달력을 통해 월별 건강 기록을 쉽게 확인하세요.
 5. 식단 및 운동 기록 분석: 식단 및 운동 기록을 그래프를 통해 한눈에 확인하세요.
 
+## 사용한 API
+* Google Translation API: 음식 이름을 번역하여 Edamam API에서 검색할 수 있도록 도와줍니다.
+    - 기능: 입력된 음식 이름을 영어로 번역합니다.
+    - 사용법: `apikeys.plist` 파일에 `GoogleTranslationAPIKey`를 추가하여 사용합니다.
+
+* Edamam Food Database API: 음식의 칼로리 및 영양 정보를 제공합니다.
+    - 기능: 입력된 음식의 칼로리를 검색합니다.
+    - 사용법: `apikeys.plist` 파일에 `EdamamAppId`, `EdamamAppKey`를 추가하여 사용합니다.
+
 ## 전체 구조 요약
 * DashboardViewController: 대시보드 화면, 오늘의 요약 정보를 카드 형식으로 표시.
 * DietDetailsViewController: 식단 요약의 세부 정보를 표시.
