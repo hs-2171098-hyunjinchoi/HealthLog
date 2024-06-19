@@ -212,7 +212,7 @@ class DietAnalysisViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
-        shapeLayer.strokeColor = UIColor.systemBlue.cgColor
+        shapeLayer.strokeColor = UIColor(named: "CustomTintColor")?.cgColor ?? UIColor.systemBlue.cgColor  // 커스텀 색상 사용
         shapeLayer.lineWidth = 2.0
         shapeLayer.fillColor = UIColor.clear.cgColor
         
