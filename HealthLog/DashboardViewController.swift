@@ -38,7 +38,7 @@ class DashboardViewController: UIViewController {
         view.addSubview(greetingLabel)
 
         // Diet Summary View
-        dietSummaryView.backgroundColor = .lightGray
+        dietSummaryView.backgroundColor = .tintColor
         dietSummaryView.layer.cornerRadius = 10
         dietSummaryView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(dietSummaryView)

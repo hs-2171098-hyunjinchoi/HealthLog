@@ -40,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = MainViewController()
         window?.makeKeyAndVisible()
+        window?.tintColor = UIColor(named: "CustomTintColor")
         
         // UNUserNotificationCenter delegate 설정
         UNUserNotificationCenter.current().delegate = self

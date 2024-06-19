@@ -287,7 +287,7 @@ class SummaryCard: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        backgroundColor = .lightGray
+        backgroundColor = UIColor(named: "CustomTintColor")
         layer.cornerRadius = 10
         addSubview(titleLabel)
         addSubview(bodyLabel)
