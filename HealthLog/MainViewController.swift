@@ -8,6 +8,7 @@ class MainViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.tintColor = .tintColor
         
         setupTabBar()
     }
@@ -27,6 +28,8 @@ class MainViewController: UIViewController {
         calendarViewController.tabBarItem = UITabBarItem(title: "Calendar", image: UIImage(systemName: "calendar"), tag: 4)
         
         tabBar.viewControllers = [alarmViewController,dietAnalysisViewController,  dashboardViewController, exerciseAnalysisViewController, calendarViewController]
+        
+        tabBar.selectedIndex = 2
         
         addChild(tabBar)
         view.addSubview(tabBar.view)
